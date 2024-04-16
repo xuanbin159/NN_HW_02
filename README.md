@@ -32,7 +32,7 @@
   ----------------------------------------------------------------
     - Total params: 61,706
     - Trainable params: 61,706
-    - LeNet-5 model execution time : 1924.1146776676178
+    - LeNet-5 model execution time : 1924.1146
 
 
 
@@ -49,7 +49,7 @@
     ----------------------------------------------------------------
     - Total params: 70,904
     - Trainable params: 70,904
-    - Custom model execution time : 2,135.263
+    - Custom model execution time : 2135.263
 
 
 ## 통계 플로팅
