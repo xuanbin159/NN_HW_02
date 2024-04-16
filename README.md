@@ -33,8 +33,10 @@
                 Linear-3                   [-1, 28]           1,596
                 Linear-4                   [-1, 10]             290
     ----------------------------------------------------------------
-    Total params: 70,904
-    Trainable params: 70,904
+    - Total params: 70,904
+    - Trainable params: 70,904
+    - Custom model execution time : 2,135.263
+
 
 ## 통계 플로팅
 - 훈련 및 테스트 데이터셋에 대한 평균 손실값과 정확도를 그래프로 표현합니다.
