@@ -50,16 +50,11 @@ class CustomMLP(nn.Module):
     def __init__(self):
         super(CustomMLP, self).__init__()
         # Assuming input images are 28x28, flatten them to 1D vector (28*28 = 784)
-        self.fc1 = nn.Linear(28*28, 120)  # First hidden layer
-        self.fc2 = nn.Linear(120, 84)     # Second hidden layer
-        self.fc3 = nn.Linear(84, 50)      # Third hidden layer
-        self.fc4 = nn.Linear(50, 10)      # Output layer, for 10 classes
+        self.fc1 = nn.Linear(28*28, 82)  # First hidden layer 64370
+        self.fc2 = nn.Linear(82, 56)     # Second hidden layer 4648
+        self.fc3 = nn.Linear(56, 28)      # Third hidden layer 1596
+        self.fc4 = nn.Linear(28, 10)      # Output layer, for 10 classes  290
         
-        # FC1: (28*28+1)*120 = 94,200
-        # FC2: (120+1)*84 = 10,164
-        # FC3: (84+1)*50 = 4,250
-        # FC4: (50+1)*10 = 510
-        # Total: 94,200 + 10,164 + 4,250 + 510 = 109,124
 
     def forward(self, img):
         # Flatten image
