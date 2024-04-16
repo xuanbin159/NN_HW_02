@@ -11,12 +11,12 @@ class LeNet5(nn.Module):
             nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5, stride=1, padding=2, bias=True),
             nn.Tanh(),
             # S2
-            nn.AvgPool2d(kernel_size=2,stride=2),
+            nn.MaxPool2d(kernel_size=2,stride=2),
             # C3 (5*5*6+1)*16 = 2416
             nn.Conv2d(in_channels=6,out_channels=16, kernel_size=5,stride=1, padding=0, bias=True),
             nn.Tanh(),
             # S4
-            nn.AvgPool2d(kernel_size=2,stride=2)
+            nn.MaxPool2d(kernel_size=2,stride=2)
         )
         self.fc_layers = nn.Sequential(
             # C5 (16*5*5+1)*120 = 48120
@@ -80,13 +80,13 @@ class LeNet52(nn.Module):
             nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5,  stride=1,  padding=2,  bias=True),
             nn.Tanh(),
             # S2
-            nn.AvgPool2d(kernel_size=2, stride=2),
+            nn.MaxPool2d(kernel_size=2, stride=2),
             # C3 (5*5*6+1)*16 = 2416
             nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, stride=1, padding=0, bias=True),
             nn.Tanh(),
             nn.Dropout(0.2),
             # S4
-            nn.AvgPool2d(kernel_size=2, stride=2)
+            nn.MaxPool2d(kernel_size=2, stride=2)
         )
         self.fc_layers = nn.Sequential(
             # C5 (16*5*5+1)*120 = 48120
