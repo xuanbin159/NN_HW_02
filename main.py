@@ -111,8 +111,8 @@ def main():
 
     torch.backends.cudnn.benchmark = True
 
-    train_data = dataset.MNIST(data_dir='/content/drive/MyDrive/Colab Notebooks/mnist-classification/data/train.tar', transform=transform, is_train=True)
-    test_data = dataset.MNIST(data_dir='/content/drive/MyDrive/Colab Notebooks/mnist-classification/data/test.tar', transform=transform, is_train=False)
+    train_data = dataset.MNIST(data_dir='./data/train.tar', transform=transform, is_train=True)
+    test_data = dataset.MNIST(data_dir='./data/test.tar', transform=transform, is_train=False)
 
     trn_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, shuffle=True, num_workers=0, pin_memory=True)
     tst_loader = torch.utils.data.DataLoader(test_data, batch_size=batch_size, shuffle=False, num_workers=0, pin_memory=True)
