@@ -30,8 +30,10 @@
            Linear-11                   [-1, 10]             850
           Softmax-12                   [-1, 10]               0
 ----------------------------------------------------------------
-  - Total params: 61,706
-  - Trainable params: 61,706
+    - Total params: 61,706
+    - Trainable params: 61,706
+    - LeNet-5 model execution time : 1924.1146776676178
+
 
 
 ### 사용자 정의 MLP
