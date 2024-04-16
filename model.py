@@ -55,7 +55,6 @@ class CustomMLP(nn.Module):
         self.fc3 = nn.Linear(84, 50)      # Third hidden layer
         self.fc4 = nn.Linear(50, 10)      # Output layer, for 10 classes
         
-        # Total number of parameters = 61,770
         # FC1: (28*28+1)*120 = 94,200
         # FC2: (120+1)*84 = 10,164
         # FC3: (84+1)*50 = 4,250
