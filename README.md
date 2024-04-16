@@ -61,6 +61,7 @@
 ## 통계 플로팅
 - 훈련 및 테스트 데이터셋에 대한 평균 손실값과 정확도를 그래프로 표현합니다.
 - 각 모델에 대해 네 개의 그래프가 제공됩니다: 훈련 손실, 훈련 정확도, 테스트 손실, 테스트 정확도.
+![re.png](https://github.com/xuanbin159/NN_HW_02/blob/main/re.png?raw=true)
 
 - LeNet-5
   - Average training accuracy = [0.7786, 0.9246, 0.9467, 0.9600, 0.9683, 0.9743, 0.9783, 0.9813, 0.9844, 0.9864]
@@ -82,7 +83,6 @@
 - `LeNet-5`, `CustomMLP`, `LeNet52` 모델의 예측 성능을 비교.
 - `LeNet-5`의 정확도가 알려진 정확도와 유사한지 확인.
 
-![re.png](https://github.com/xuanbin159/NN_HW_02/blob/main/re.png?raw=true)
 
 ## 파일 설명
 - `model.py`: `LeNet-5`, `CustomMLP`, `LeNet52` 모델 정의
