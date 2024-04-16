@@ -82,7 +82,7 @@
 - `LeNet-5`, `CustomMLP`, `LeNet52` 모델의 예측 성능을 비교.
 - `LeNet-5`의 정확도가 알려진 정확도와 유사한지 확인.
 
-
+![re.png](https://github.com/xuanbin159/NN_HW_02/blob/main/re.png?raw=true)
 
 ## 파일 설명
 - `model.py`: `LeNet-5`, `CustomMLP`, `LeNet52` 모델 정의
