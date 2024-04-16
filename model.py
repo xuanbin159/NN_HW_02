@@ -30,9 +30,13 @@ class LeNet5(nn.Module):
             nn.Softmax(dim=1)
         )
 
-        # Total number of parameters = 123,412
-        # 156+2,416+48,120+10,164+850 = 61,706
-        # backpropagation 61,706
+       # Total number of parameters = 61,706
+       # C1: (5*5*1+1)*6 = 156
+       # C3: (5*5*6+1)*16 = 2,416
+       # C5: (16*5*5+1)*120 = 48,120
+       # F6: (120+1)*84 = 10,164
+       # OUTPUT: (84+1)*10 = 850
+       # Total: 156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
 
     def forward(self, img):
         x = self.conv_layers(img)
@@ -46,11 +50,18 @@ class CustomMLP(nn.Module):
     def __init__(self):
         super(CustomMLP, self).__init__()
         # Assuming input images are 28x28, flatten them to 1D vector (28*28 = 784)
-        self.fc1 = nn.Linear(28*28, 300)  # First hidden layer
-        self.fc2 = nn.Linear(300, 150)    # Second hidden layer
-        self.fc3 = nn.Linear(150, 84)     # Third hidden layer, similar to LeNet-5 F6 layer
-        self.fc4 = nn.Linear(84, 10)      # Output layer, for 10 classes
+        self.fc1 = nn.Linear(28*28, 120)  # First hidden layer
+        self.fc2 = nn.Linear(120, 84)     # Second hidden layer
+        self.fc3 = nn.Linear(84, 50)      # Third hidden layer
+        self.fc4 = nn.Linear(50, 10)      # Output layer, for 10 classes
         
+        # Total number of parameters = 61,770
+        # FC1: (28*28+1)*120 = 94,200
+        # FC2: (120+1)*84 = 10,164
+        # FC3: (84+1)*50 = 4,250
+        # FC4: (50+1)*10 = 510
+        # Total: 94,200 + 10,164 + 4,250 + 510 = 109,124
+
     def forward(self, img):
         # Flatten image
         x = img.view(img.size(0), -1)
@@ -97,10 +108,13 @@ class LeNet52(nn.Module):
             nn.Softmax(dim=1)
         )
 
-        # Total number of parameters = 123,412
-        # 156+2,416+48,120+10,164+850 = 61,706
-        # backpropagation 61,706
-
+       # Total number of parameters = 61,706
+       # C1: (5*5*1+1)*6 = 156
+       # C3: (5*5*6+1)*16 = 2,416
+       # C5: (16*5*5+1)*120 = 48,120
+       # F6: (120+1)*84 = 10,164
+       # OUTPUT: (84+1)*10 = 850
+       # Total: 156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
     def forward(self, img):
         x = self.conv_layers(img)
         x = x.view(-1, 16 * 5 * 5)
