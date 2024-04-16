@@ -47,7 +47,7 @@
 - 플릭커넥티드 레이어 블록에 nn.Dropout(0.5)가 적용
 
 ## 파일 설명
-- `model.py`: LeNet-5 및 CustomMLP 모델 정의
+- `model.py`: LeNet-5, CustomMLP, LeNet52 모델 정의
 - `dataset.py`: MNIST 데이터 로딩 및 전처리
 - `main.py`: 모델 훈련 및 평가 실행 스크립트
 
